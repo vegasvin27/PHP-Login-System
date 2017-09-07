@@ -1,4 +1,4 @@
-$(document).on('submit', 'form.js-register', function (event) {
+ $(document).on('submit', 'form.js-register', function (event) {
     event.preventDefault();
 
     var _form = $(this);
@@ -31,6 +31,9 @@ $(document).on('submit', 'form.js-register', function (event) {
         console.log(data);
         if(data.redirect !== undefined) {
              window.location = data.redirect;
+        }
+        else if (data.error !== undefined) {
+            _error.text(data.error).show();
         }
 
         alert(data.name);

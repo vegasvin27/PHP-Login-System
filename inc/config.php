@@ -6,6 +6,7 @@
 
     //Include the db.php file
     include_once "classes/db.php";
+    include_once "classes/filter.php";
 
     $con = db::getConnection();
 
