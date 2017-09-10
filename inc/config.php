@@ -5,16 +5,21 @@
     }
 
     //Sessions are always turned on
-    if (!isset($SESSION)) {
+    if (!isset($_SESSION)) {
         session_start();
     }
 
+    error_reporting(-1);
+    ini_set('display_errors', 'On');
+
     //Include the db.php file
-    include_once "classes/db.php";
-    include_once "classes/filter.php";
+    include_once "classes/DB.php";
+    include_once "classes/Filter.php";
+    include_once "classes/Page.php";
+    include_once "classes/User.php";
     include_once "functions.php";
 
 
-    $con = db::getConnection();
+    $con = DB::getConnection();
 
 ?>

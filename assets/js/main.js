@@ -8,11 +8,11 @@
         password: $("input[type='password']", _form).val()
     };
 
-    if (dataObj.email.length < 16) {
+    if (dataObj.email.length < 8) {
         _error.text("Please enter a valid email address").show();
         return false;
     }
-    else if (dataObj.password.length < 11) {
+    else if (dataObj.password.length < 10) {
         _error.text("Please enter a passphrase that is at least 11 characters long").show();
         return false;
     }
@@ -61,7 +61,7 @@
         _error.text("Please enter a valid email address").show();
         return false;
     }
-    else if (dataObj.password.length < 11) {
+    else if (dataObj.password.length < 10) {
         _error.text("Please enter a passphrase that is at least 11 characters long").show();
         return false;
     }

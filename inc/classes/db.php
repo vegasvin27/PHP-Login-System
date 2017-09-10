@@ -5,7 +5,7 @@ if(!defined('__CONFIG__')) {
     exit('You do not have a config file');
 }
 
-class db {
+class DB {
 
     protected static $con;
 
@@ -27,7 +27,7 @@ class db {
     public static function getConnection() {
 
         if (!self::$con) {
-            new db();
+            new DB();
         }
 
         return self::$con;
